@@ -1,0 +1,16 @@
+name: sample-expressjs
+region: fra
+services:
+- environment_slug: node-js
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: ThorbjoernTasche/sample-expressjs
+  http_port: 8080
+  instance_count: 1
+  instance_size_slug: basic-xs
+  name: sample-expressjs
+  routes:
+  - path: /
+  build_command: npm run build
+  run_command: npm start
